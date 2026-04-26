@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🤖 TalentScout AI: Autonomous Recruitment Agent
+TalentScout AI is an intelligent recruitment agent designed to automate the initial stages of the hiring pipeline. Built for the Deccan AI Catalyst Hackathon, it moves beyond simple keyword matching by using LLM-driven reasoning to discover, score, and engage candidates autonomously.
 
-## Getting Started
+🚀 Key Features
+Precision Discovery Engine: Analyzes Job Descriptions (JD) to extract core requirements and filters a talent pool based on strict technical alignment, preventing "False Positives" (e.g., matching Backend developers to Frontend roles).
 
-First, run the development server:
+Dual-Dimensional Scoring:
 
-```bash
+Technical Match Score: A weighted calculation based on hard skills and domain expertise.
+
+Interest Score: Derived from a simulated conversational outreach where the agent assesses candidate intent and fit.
+
+Match Explainability: Provides an "Agent Verdict" for every candidate, offering transparent reasoning for the assigned score.
+
+Dynamic Candidate Ingestion: Supports instant profile analysis via text-based resume ingestion.
+
+🛠️ Tech Stack
+Framework: Next.js 14 (App Router)
+
+AI Orchestration: Groq Cloud (Llama 3.3 / Mixtral models)
+
+Styling: Tailwind CSS & Framer Motion
+
+Icons: Lucide React
+
+API: Axios
+
+⚙️ Getting Started
+Prerequisites
+Node.js 18+
+
+A Groq API Key (Get one at console.groq.com)
+
+Installation
+Clone the repository:
+
+Bash
+git clone https://github.com/your-username/talent-agent.git
+cd talent-agent
+Install dependencies:
+
+Bash
+npm install
+Set up environment variables:
+Create a .env.local file in the root directory and add your API key:
+
+Code snippet
+GROQ_API_KEY=your_groq_api_key_here
+Run the development server:
+
+Bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 to see the agent in action.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🤖 The Agentic Flow
+JD Analysis: Paste a JD. The agent identifies mandatory vs. optional skills.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Discovery: The system scans the internal candidates.json and displays only those exceeding a 20% match threshold.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Engagement: Click "Assess Interest." The agent initiates a simulated conversation to gauge how well the candidate's career goals align with the role.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ranking: The final dashboard displays a ranked shortlist based on the combined Match and Interest scores.

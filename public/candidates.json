@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Arjun Mehta",
+    "role": "Frontend Engineer",
+    "skills": ["React", "TypeScript", "Tailwind CSS", "Next.js"],
+    "experience": "3 years",
+    "bio": "Passionate about building performant web apps and clean UIs."
+  },
+  {
+    "id": "2",
+    "name": "Sarah Chen",
+    "role": "Full Stack Developer",
+    "skills": ["Node.js", "Express", "MongoDB", "React", "Docker"],
+    "experience": "5 years",
+    "bio": "Experienced in MERN stack and cloud deployments with AWS."
+  },
+  {
+    "id": "3",
+    "name": "Vikram Singh",
+    "role": "Backend Developer",
+    "skills": ["Python", "Django", "PostgreSQL", "Redis"],
+    "experience": "4 years",
+    "bio": "Focused on scalable API design and system architecture."
+  }
+]
