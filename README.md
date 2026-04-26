@@ -56,6 +56,9 @@ TalentScout AI is an intelligent recruitment agent designed to automate the init
 #🤖 The Agentic Flow
 
 **1. JD Analysis**: Paste a JD. The agent identifies mandatory vs. optional skills.
+
 **2. Discovery**: The system scans the internal candidates.json and displays only those exceeding a 20% match threshold.
+
 **3. Engagement**: Click "Assess Interest." The agent initiates a simulated conversation to gauge how well the candidate's career goals align with the role.
+
 **4. Ranking**: The final dashboard displays a ranked shortlist based on the combined Match and Interest scores.
